@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "name": "Black abd",
+        "price": 5500,
+        "image":"./img1.png"
+    },
+
+    {
+        "id":2,
+        "name": "Black abd2",
+        "price": 5500,
+        "image":"./img2.png"
+    },  
+    
+    {
+        "id":3,
+        "name": "Black abd3",
+        "price": 5500,
+        "image":"./img3.png"
+    }, 
+    
+    {
+        "id":4,
+        "name": "Black abd4",
+        "price": 5500,
+        "image":"./img1.png"
+    }
+]

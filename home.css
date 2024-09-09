@@ -1,0 +1,151 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.15rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px 50px;
+    border-bottom: 1px solid black;
+
+}
+
+.cart-icon button {
+    background: none;
+    outline: none;
+    border: none;
+
+
+}
+
+.carousel-item {
+    padding: 10px 20px;
+    width: 100%;
+    height: 80vh;
+}
+
+.img {
+    object-fit: fill;
+    height: 100% !important;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3,1fr);` */
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5px;
+    background-color: black;
+    margin: 50px;
+    border-radius: 25px
+}
+
+.item img {
+    width: 60%;
+    height: 60%;
+    border-radius: 25px;
+}
+
+.cart {
+    display: none;
+    width: 30%;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -30%;
+    bottom: 0;
+    grid-template-rows: 70px 1fr 70px;
+    transition: 0.5s ease-in-out;
+}
+
+.cartshow {
+    display: grid;
+    width: 30%;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    grid-template-rows: 70px 1fr 70px;
+    transition: 0.5s ease-in-out;
+
+}
+
+body.showCart .cartTab {
+    right: 0;
+    transition: 0.5s ease-in-out;
+
+}
+
+body.showCart {
+    display: grid;
+    grid-template-columns: 1fr 0.45fr;
+    transition: 0.5s ease-in-out;
+}
+
+body {
+    transition: 0.5s ease-in-out;
+
+}
+
+.newitem {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newitem img {
+    width: 30%;
+    border-radius: 15px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow: auto; */
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:600px) {
+    .carousel-item {
+        height: 50vh;
+    }
+
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container{
+        padding: 0px 0px;
+    }
+    .item{
+        margin: 10px;
+    }
+    .cart{
+        right: -800px;
+        width: 250px;
+    }
+    .cartshow{
+        right: 0px;
+        width: 250px;
+    }
+}
