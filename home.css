@@ -1,3 +1,14 @@
+.body {
+    background-color: #a82621;
+    color: #f5d547;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1d1d1f;
+    margin-right: 5px;
+}
+
 .Navbar {
     display: flex;
     justify-content: space-between;
@@ -5,7 +16,8 @@
     font-size: 1.15rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 20px 50px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px dotted black;
+    /* background-color: #0D3B66; */
 
 }
 
@@ -42,9 +54,22 @@
     flex-direction: column;
     padding: 20px;
     gap: 5px;
-    background-color: black;
+    background-color: #1d1d1f;
     margin: 50px;
-    border-radius: 25px
+    border-radius: 25px;
+    color: #6D6D6D;
+}
+
+.price {
+    color: #f5d547;
+
+}
+
+button {
+    background-color: #7e8287;
+    color: #f5d547;
+    font-weight: bold;
+
 }
 
 .item img {
@@ -55,20 +80,22 @@
 
 .cart {
     display: none;
-    width: 30%;
+    width: 50%;
     background-color: #353432;
     color: #eee;
     position: fixed;
     top: 0;
-    right: -30%;
+    right: -50%;
     bottom: 0;
     grid-template-rows: 70px 1fr 70px;
     transition: 0.5s ease-in-out;
 }
 
+
+
 .cartshow {
     display: grid;
-    width: 30%;
+    width: 50%;
     background-color: #353432;
     color: #eee;
     position: fixed;
@@ -91,6 +118,7 @@ body.showCart {
     grid-template-columns: 1fr 0.45fr;
     transition: 0.5s ease-in-out;
 }
+
 
 body {
     transition: 0.5s ease-in-out;
@@ -115,7 +143,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 .checkout {
@@ -125,27 +153,55 @@ body {
     align-items: center;
     padding: 10px 10px;
 }
+#close {
+    background: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    transition: 0.5s ease-in-out;
+}
 
 @media screen and (max-width:600px) {
     .carousel-item {
         height: 50vh;
     }
 
-    .products {
-        grid-template-columns: repeat(1, 1fr);
+    .title {
+        font-size: 1rem;
+        margin: 0;
     }
-    .container{
+
+    .products {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .Container {
         padding: 0px 0px;
     }
-    .item{
+
+    .item {
         margin: 10px;
+        padding: 5px;
     }
-    .cart{
-        right: -800px;
-        width: 250px;
+
+    .cartshow {
+        width: 100%;
+        z-index: 3;
     }
-    .cartshow{
-        right: 0px;
-        width: 250px;
+
+    #close {
+        background: none;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .Navbar {
+        margin: 0;
+        padding: 10px;
+
     }
 }

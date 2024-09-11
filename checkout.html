@@ -24,13 +24,13 @@
     <main class="main">
         <div class="form" id="form">
             <form >
-                <input type="text" name="First Name"  id="name"placeholder="First Name" >
-                <input type="text" name="Last Name" placeholder="Last Name" >
-                <input type="email" name="email" id="email" placeholder="Email" >
-                <input type="number" name="ph-num" id="ph-num" placeholder="Phone">
-                <input type="text" name="address" id="address" placeholder="Address">
-                <input type="text" name="country" id="country" placeholder="Country">
-                <input type="text" name="city" id="city" placeholder="City">
+                <input type="text" name="First Name"  id="name"placeholder="First Name" required="true">
+                <input type="text" name="Last Name" placeholder="Last Name" required="true">
+                <input type="email" name="email" id="email" placeholder="Email"  required="true">
+                <input type="number" name="ph-num" id="ph-num" placeholder="Phone" required="true">
+                <input type="text" name="address" id="address" placeholder="Address" required="true">
+                <input type="text" name="country" id="country" placeholder="Country" required="true">
+                <input type="text" name="city" id="city" placeholder="City" required="true">
                 <button type="submit" class="confirm-btn" id="confirm-btn" onclick="sendEmail()">Confirm</button>
             </form>
 

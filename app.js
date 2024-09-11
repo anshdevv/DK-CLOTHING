@@ -5,6 +5,7 @@ let cart_container = document.getElementById('cart')
 let body = document.querySelector('body');
 let total = document.getElementById('total')
 let checkout = document.getElementById("check")
+let close_button = document.getElementById("close")
 
 let products = []
 let cart = []
@@ -12,9 +13,17 @@ if (cart_button) {
     cart_button.addEventListener('click', () => {
         cart_container.classList.toggle('cartshow')
         body.classList.toggle('showCart')
-
     })
 }
+
+close_button.addEventListener('click', () => {
+    cart_container.classList.toggle('cartshow')
+    body.classList.toggle('showCart')
+
+})
+
+
+
 
 const fetch_prod = () => {
     fetch('products.json')
@@ -44,7 +53,7 @@ const add_prod_to_html = () => {
             newProduct.classList.add('item');
             newProduct.innerHTML =
                 `<img src="${product.image}" alt="">
-                <h2>${product.name}</h2>
+                <h2 class='title'>${product.name}</h2>
                 <div class="price">$${product.price}</div>
                 <button class="addCart">Add To Cart</button>`;
             product_list.appendChild(newProduct);
@@ -63,10 +72,10 @@ if (product_list) {
     })
 }
 
-function remove_zero(){
-    for(let i=0;i<cart.length;i++){
-        if(cart[i].quantity==0){
-            cart.splice(i,1)
+function remove_zero() {
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].quantity == 0) {
+            cart.splice(i, 1)
         }
     }
 }
@@ -121,7 +130,7 @@ const addCartToHTML = () => {
 const changeqty = (product_id, op) => {
     let pos_prod = cart.findIndex((value) => value.id == product_id)
 
-    
+
 
     if (cart[pos_prod].quantity > 0 && op == "minus") {
         cart[pos_prod].quantity = cart[pos_prod].quantity - 1;
